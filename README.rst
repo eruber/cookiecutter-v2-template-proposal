@@ -54,17 +54,19 @@ All errors (via omission or commission), oversights, and/or misguided
 implementation decisions reflected herein, rest solely on the shoulders of the
 primary author, `eruber`_.
 
-
-.. _Cookiecutter Pull Request #848: https://github.com/audreyr/cookiecutter/pull/848
-.. _hackebrot: https://github.com/hackebrot
-.. _a specific reference implementation of Cookiecutter: https://github.com/eruber/cookiecutter/tree/new-2.0-context
-.. _eruber: https://github.com/eruber
-
+Read the document on line at `Read The Docs`_
 
 
 .. |readthedocs| image:: https://readthedocs.org/projects/pip/badge/?version=latest
     :alt: Documentation Status
     :scale: 100%
     :target: http://cookiecutter-version-2-template-format.readthedocs.io/en/latest/index.html
+
+.. _Cookiecutter Pull Request #848: https://github.com/audreyr/cookiecutter/pull/848
+.. _hackebrot: https://github.com/hackebrot
+.. _a specific reference implementation of Cookiecutter: https://github.com/eruber/cookiecutter/tree/new-2.0-context
+.. _eruber: https://github.com/eruber
+.. _Read The Docs: http://cookiecutter-version-2-template-format.readthedocs.io/en/latest/index.html
+
 
 
