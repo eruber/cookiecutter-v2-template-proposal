@@ -37,13 +37,21 @@ The version 2 template adds additional template **metadata** that exists outside
 the jinja2 context, but is expected to support features in the future that
 will enhance the overall user experience.
 
+.. index::
+   single: Mandatory Cookiecutter Metadata Fields
+
 Required Metadata Template Fields
 =================================
 Currently the minimum number of required metadata fields is three:
 
-* **name**
-* **cookiecutter_version**
-* **variables**
+* :ref:`name <name0>`
+* :ref:`cookiecutter_version <cc_version>`
+* :ref:`variables <variables0>`
+
+.. index::
+   single: Metadata - Name Field
+
+.. _name0:
 
 name Field
 ----------
@@ -59,6 +67,10 @@ For example::
           which is not great for local templates or relative paths. This could be
           something like an ID.
 
+.. index::
+   single: Metadata - Cookiecutter Version Field
+
+.. _cc_version:
 
 cookiecutter_version Field
 --------------------------
@@ -79,6 +91,10 @@ There are other meanings of this field to consider, see the note below.
           on a new built-in extension or new fields.
 
 
+.. index::
+   single: Variables Array Field
+
+.. _variables0:
 
 variables Field
 ---------------
@@ -95,6 +111,8 @@ will be identified in the :ref:`Variables` section later in this document.
           The elements of this array represent a single variable, similarly to what you
           currently find in a **cookiecutter.json** file.
 
+.. index::
+   single: Cookiecutter Template Examples; Minimum
 
 The Minium Cookiecutter Template
 --------------------------------
@@ -108,18 +126,25 @@ this::
        "variables": []
    }
 
+.. index::
+   single: Optional Cookiecutter Metadata Fields
 
 Optional Metadata Template Fields
 =================================
 The following fields are optional:
 
-* **description**
-* **version**
-* **authors**
-* **license**
-* **keywords**
-* **url**
+* :ref:`description <description0>`
+* :ref:`version <version>`
+* :ref:`authors <authors>`
+* :ref:`license <license>`
+* :ref:`keywords <keywords>`
+* :ref:`url <url>`
 
+
+.. _description0:
+
+.. index::
+   single: Description Field (Optional Metadata)
 
 description Field (Optional)
 ----------------------------
@@ -130,6 +155,10 @@ of the template.
           This can be used for user facing aspects, like a welcome message when running
           cookiecutter.
 
+.. _version:
+
+.. index::
+   single: Version Field (Optional Metadata)
 
 version Field (Optional)
 ------------------------
@@ -140,6 +169,10 @@ identifier is used to version control the template.
 .. note:: **hackebrot**:
           This will help us generate helpful error messages.
 
+.. _authors:
+
+.. index::
+   single: Authors Field (Optional Metadata)
 
 authors Field (Optional)
 ------------------------
@@ -152,6 +185,10 @@ maintainers.
           like to emphasize that template authors need to make sure that their templates
           work.
 
+.. _license:
+
+.. index::
+   single: License Field (Optional Metadata)
 
 license Field (Optional)
 ------------------------
@@ -163,6 +200,10 @@ The **license** field is a string identifying the license for the template code.
           the repository is missing a LICENSE file or w/e the license in question
           requires. We don't need this for a Minimal Viable Product.
 
+.. _keywords:
+
+.. index::
+   single: Keywords Field (Optional Metadata)
 
 keywords Field (Optional)
 -------------------------
@@ -176,6 +217,11 @@ keywords.
           even the template code to see if a template uses certain frameworks.
 
 
+.. _url:
+
+.. index::
+   single: URL Field (Optional Metadata)
+
 url Field (Optional)
 --------------------
 The **url** field is a string URL for the template project.
@@ -184,6 +230,8 @@ The **url** field is a string URL for the template project.
           We can use this to point users to the project if they encounter an error. This
           would certainly be optional.
 
+.. index::
+   single: Cookiecutter Template Examples; Showing All Metadata Fields
 
 Example Cookiecutter Template
 -----------------------------
@@ -204,6 +252,11 @@ metadata fields; note that the variables array is still empty, but not for long:
        "variables": []
    }
 
+
+
+.. index::
+   single: Variables Array Field Section
+
 .. _Variables:
 
 Variables Array
@@ -212,12 +265,20 @@ The **variables** field is an array of ordered dictionaries (`OrderedDict`_).
 Each dictionary represents a varible in the jinja2 context.
 
 
+.. index::
+   single: Variables Array Entry; Required Fields
+
 Required Variable Fields
 ------------------------
 The following fields are **required** to be defined for each variable:
 
-* **name**
-* **default**
+* :ref:`name <name>`
+* :ref:`default <default>`
+
+.. _name:
+
+.. index::
+   single: Variables Array Entry; Name Field (Required)
 
 name Variable Field
 ^^^^^^^^^^^^^^^^^^^
@@ -235,6 +296,11 @@ For example::
 .. note:: **hackebrot**:
           This is nothing different from what we have in the current
           **cookiecutter.json** as keys. **These must not be templated!**
+
+.. _default:
+
+.. index::
+   single: Variables Array Entry; Default Field (Required)
 
 default Variable Field
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -256,6 +322,8 @@ For example, the variable named 'project_repo', may have a default value of
           Again this is what we already have as values. If a default is a string, we must
           assume it is templated, so we render it before prompting the user.
 
+.. index::
+   single: Variables Array Entry; Optional Fields
 
 Optional Variable Fields
 ------------------------
@@ -277,6 +345,9 @@ The following variable fields are optional:
 
 
 .. _types:
+
+.. index::
+   single: Variables Array Entry; Type Field (Optional)
 
 type Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -310,6 +381,9 @@ The reference implementation supports the following default value types:
 
 .. _description:
 
+.. index::
+   single: Variables Array Entry; Description Field (Optional)
+
 description Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The **description** variable field is a string used to describe what the
@@ -339,6 +413,9 @@ The **description** field's default value is: None.
 
 .. _prompt:
 
+.. index::
+   single: Variables Array Entry; Prompt Field (Optional)
+
 prompt Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The **prompt** variable field is a string that will be used to prompt the user
@@ -354,6 +431,9 @@ The **prompt** field's default value is rendered by jinja2 as::
 
 
 .. _prompt_user:
+
+.. index::
+   single: Variables Array Entry; Prompt_User Field (Optional)
 
 prompt_user Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -377,6 +457,9 @@ The **prompt_user** field's default value is: True
 
 .. _hide_input:
 
+.. index::
+   single: Variables Array Entry; Hide_Input Field (Optional)
+
 hide_input Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The **hide_input** variable field is a boolean - when specified as true will
@@ -394,6 +477,9 @@ The **hide_input** field's default value is: False
 
 .. _choices:
 
+.. index::
+   single: Variables Array Entry; Choices Field (Optional)
+
 choices Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The **choices** variable field is an array of string, boolean, or number which
@@ -409,6 +495,9 @@ The **choices** field's default value is: []
 
 
 .. _skip_if:
+
+.. index::
+   single: Variables Array Entry; Skip_If Field (Optional)
 
 skip_if Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -430,6 +519,9 @@ variable.
 
 .. _do_if:
 
+.. index::
+   single: Variables Array Entry; Do_if Field (Optional)
+
 do_if Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The **do_if** variable field is a string that holds conditionals based on
@@ -450,6 +542,9 @@ variable.
 
 .. _if_yes_skip_to:
 
+.. index::
+   single: Variables Array Entry; If_Yes_Skip_To Field (Optional)
+
 if_yes_skip_to Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The **if_yes_skip_to** variable field is a string that names a variable to
@@ -469,6 +564,9 @@ The **if_yes_skip_to** field's default value is: None
 
 .. _if_no_skip_to:
 
+.. index::
+   single: Variables Array Entry; If_No_Skip_To Field (Optional)
+
 if_no_skip_to Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The **if_no_skip_to** variable field is a string that names a variable to
@@ -486,6 +584,9 @@ The **if_no_skip_to** field's default value is: None
 
 .. _validation:
 
+.. index::
+   single: Variables Array Entry; Validation Field (Optional)
+
 validation Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The **validation** variable field is a string containing a regular expression
@@ -501,6 +602,9 @@ The **validation** field's default value is: None
 
 
 .. _validation_flags:
+
+.. index::
+   single: Variables Array Entry; Validation_Flags Field (Optional)
 
 validation_flags Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -537,6 +641,9 @@ verbose, do this::
 
 
 .. _validation_msg:
+
+.. index::
+   single: Variables Array Entry; Validation_Msg Field (Optional)
 
 validation_msg Variable Field (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

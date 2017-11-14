@@ -44,6 +44,11 @@ section `Injecting Extra Context`_.
           OrderedDict elements -- one for each variable that the EXTRA_CONTEXT
           wishes to overwrite.
 
+.. index::
+   single: overwrite; default field
+
+.. index::
+   single: overwrite; choices field
 
 Overwrite Considerations Regarding 'default' & 'choices' Fields
 ===============================================================
@@ -196,6 +201,8 @@ fields updated as follows::
       ...
    }
 
+.. index::
+   single: overwrite; renaming variable name
 
 Special Overwrite Syntax for Renaming a Variable
 ================================================
@@ -224,6 +231,9 @@ The overwrite logic also takes care of updating in other references to the
 variable's name that might exists elsewhere in the variable -- for example,
 if the variable's name were used in an a **skip_if** field.
 
+
+.. index::
+   single: overwrite; removing field from variable
 
 Special Overwrite Syntax for Removing a Field from a Variable
 =============================================================
