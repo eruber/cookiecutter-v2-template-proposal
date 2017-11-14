@@ -31,6 +31,8 @@
 Cookiecutter Version 2 Template Proposal
 ****************************************
 
+|readthedocs|
+
 This repo contains documentation that describes a new Cookiecutter version 2
 template format based on two sources:
 
@@ -57,4 +59,12 @@ primary author, `eruber`_.
 .. _hackebrot: https://github.com/hackebrot
 .. _a specific reference implementation of Cookiecutter: https://github.com/eruber/cookiecutter/tree/new-2.0-context
 .. _eruber: https://github.com/eruber
+
+
+
+.. |readthedocs| image:: https://readthedocs.org/projects/pip/badge/?version=latest
+    :alt: Documentation Status
+    :scale: 100%
+    :target: http://cookiecutter-version-2-template-format.readthedocs.io/en/latest/index.html
+
 
