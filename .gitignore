@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Sphinx documentation
+# docs/build/
+
+# dotenv
+.env
+
+# virtualenv
+.venv*
+venv/
+ENV/
