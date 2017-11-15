@@ -53,7 +53,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Cookiecutter Version 2 Template Format Proposal'
-copyright = '2017, E.R. Uber'
+copyright = '2017, E.R. Uber <eruber@gmail.com>'
 author = 'E.R. Uber'
 
 # The version info for the project you're documenting, acts as replacement for

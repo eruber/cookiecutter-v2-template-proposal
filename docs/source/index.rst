@@ -42,6 +42,7 @@ Cookiecutter V2 Template Format Proposal
    intro
    format
    special
+   doc_repo
    appendix
 
 * :ref:`genindex`
